@@ -1,0 +1,23 @@
+# Runtime data and SQLite companion files
+/private_data/
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+
+# User-uploaded images (create this directory on the server)
+/uploads/
+
+# Local configuration and caches
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+/tmp/
+/cache/
+/.phpunit.cache/
+/.phpunit.result.cache

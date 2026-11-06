@@ -1,0 +1,12 @@
+Options -Indexes
+
+<FilesMatch "(?i)^(\.htaccess|.*\.(sqlite|sqlite3|db|json|bak|sql|ini|log))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+RewriteEngine On
+RewriteRule ^private_data(?:/|$) - [F,L,NC]
